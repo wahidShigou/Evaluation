@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        function nb_car(mot, lettre)
+        {
+            const motm = mot.toLowerCase();
+            const lettrem = lettre.toLowerCase();
+            mot2 = mot.split("");
+            const res = mot2.filter((car, index, arr) => {
+                return car === lettrem
+            })
+            return res.length;
+        }
+        console.log(nb_car('bonjour', 'o'));
+        console.log(nb_car('bonjour', 'O'));
+        console.log(nb_car('hello les amis', 'o'));
+        console.log(nb_car('hello les amis', 'z'));
+        */
+
+        function exo1(rep, y){
+            const nrep = new RegExp(y,"ig");
+            let co = 0;
+            co = (rep.match(nrep)||[]).length;
+            return co;
+        }
+
+        console.log(exo1('bonjour' , 'o'));
+        console.log(exo1( 'bonjour' , 'O'));
+        console.log(exo1('hello les amis' , 'o'));
+        console.log(exo1('hello les amis' , 'z'));
+
+
+    </script>
+</body>
+</html>
+
+<!-- OU
+    function nb_car(mot, lettre)
+        {
+            const lettrem = lettre.toLowerCase();
+            
+            return mot.toLowerCase().split("").filter((car, index, arr) =>  car === lettrem ).length
+        }
+        console.log(nb_car('bonjour', 'o'));
+        console.log(nb_car('bonjour', 'O'));
+        console.log(nb_car('hello les amis', 'o'));
+        console.log(nb_car('hello les amis', 'z'));
+-->

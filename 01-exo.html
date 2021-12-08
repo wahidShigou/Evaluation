@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //const rep = 'bonjour';
+        function exo1(rep){
+            for(let i=0; i<rep.length; i++)
+            {
+                const nrep = new RegExp(rep[i],"g");
+                let co = 0;
+                co = (rep.match(nrep)||[]).length
+                if(co === 1){
+                    //console.log(rep[i]);
+                    return rep[i];
+                }
+            }
+            return null;
+        }
+
+        console.log(exo1('hello henry'));
+        console.log(exo1('coucou'));
+        console.log(exo1('bonjour'));
+        
+        
+        
+
+    </script>
+</body>
+</html>

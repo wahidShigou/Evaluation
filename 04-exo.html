@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function exo4(myArray)
+        {
+            //var myArray = ['January', 'February', 'March'];
+            if(!Array.isArray(myArray)) return null;
+            if(myArray.length === 0) return null;
+            var rand = myArray[Math.floor(Math.random() * myArray.length) +0];
+            return rand;
+        }
+
+        console.log(exo4(['January', 'February', 'March']));
+        console.log(exo4( ['a', 'b' ,'c', 'd'] ));
+        console.log(exo4([]));
+        console.log(exo4(""));
+        
+        
+    </script>
+</body>
+</html>
+

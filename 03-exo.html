@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function returnTab(tab1, tab2){
+            const res = [...tab1];
+            tab2.forEach((element) => {
+                if(!tab1.find(function(el){
+                    return element === el;
+                })){
+                    res.push(element);
+                }
+            });
+           
+            return res.reduce(function (acc, el, index, arr) {
+                if (!acc.find(function (el2) {
+                     return el2 === el;
+                })) {
+                
+                acc.push(el);
+            }
+            return acc;
+        }, [])
+        }
+        console.log(returnTab(['a', 'b'], ['c', 'd']));
+        console.log(returnTab(['a', 'b'], ['a', 'd']));
+        console.log(returnTab(['a', 'b', 'a'], ['a', 'd', 'b', 'a']));
+    </script>
+</body>
+</html>
